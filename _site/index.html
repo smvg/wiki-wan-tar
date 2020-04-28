@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Descripción general de las WAN">
+<meta name="keywords" content="generalpunto a puntohub & spokemesh,  sample homepage">
+<title>Tecnologías WAN | Tema 8: WAN</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="tar-wiki-wan" href="http://0.0.0.0:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Tema 8: WAN</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Tecnologías WAN">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Indice </li>
+  
+  
+  
+      
+  
+  <li>
+      <a title="Descripción general" href="#">Descripción general</a>
+      <ul>
+          
+          
+          
+          <li class="active"><a title="Tecnologías WAN" href="index.html">Tecnologías WAN</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Conexiones Punto a Punto" href="#">Conexiones Punto a Punto</a>
+      <ul>
+          
+          
+          
+          <li><a title="Descripción de Punto a Punto" href="punto_punto.html">Descripción de Punto a Punto</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Operación de PPP" href="operacion_ppp.html">Operación de PPP</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Implementación de PPP" href="implementacion_ppp.html">Implementación de PPP</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Conexiones Hub and Spoke" href="#">Conexiones Hub and Spoke</a>
+      <ul>
+          
+          
+          
+          <li><a title="Descripción de Hub & Spoke" href="hub_spoke.html">Descripción de Hub & Spoke</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Conexiones Mesh" href="#">Conexiones Mesh</a>
+      <ul>
+          
+          
+          
+          <li><a title="Descripción de Mesh" href="mesh.html">Descripción de Mesh</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Solución de problemas" href="#">Solución de problemas</a>
+      <ul>
+          
+          
+          
+          <li><a title="Conectividad WAN" href="solucion.html">Conectividad WAN</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Conexiones de sucursal" href="#">Conexiones de sucursal</a>
+      <ul>
+          
+          
+          
+          <li><a title="Conexiones de acceso remoto" href="conexiones_remoto.html">Conexiones de acceso remoto</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="PPPoE" href="pppoe.html">PPPoE</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="VPN" href="vpn.html">VPN</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="GRE" href="gre.html">GRE</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="eBGP" href="ebgp.html">eBGP</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Glosario" href="#">Glosario</a>
+      <ul>
+          
+          
+          
+          <li><a title="De la A a la I" href="glosario_a_i.html">De la A a la I</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="De la J a la R" href="glosario_j_r.html">De la J a la R</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="De la S a la Z" href="glosario_s_z.html">De la S a la Z</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a title="Bibliografía" href="#">Bibliografía</a>
+      <ul>
+          
+          
+          
+          <li><a title="Descripción general" href="biblio_1.html">Descripción general</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Conexiones Punto a Punto" href="biblio_2.html">Conexiones Punto a Punto</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Conexiones Hub and Spoke" href="biblio_3.html">Conexiones Hub and Spoke</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Conexiones Mesh" href="biblio_4.html">Conexiones Mesh</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Solución de Problemas" href="biblio_5.html">Solución de Problemas</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a title="Conexiones de Sucursal" href="biblio_6.html">Conexiones de Sucursal</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Tecnologías WAN</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Descripción general de las WAN</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+    <a target="_blank" rel="noopener" href="https://github.com/smvg/tar-wiki-wan/blob/gh-pages/pages/mydoc/index.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edítame</a>
+
+    
+
+   <h2 id="wan">WAN</h2>
+
+<p>A día de hoy el volumen de datos y el tráfico que se genera a partir de este requiere que se implementen infraestructuras de diversos tamaños y características para garantizar que el usuario final no se enfrente a problemas de seguridad y rendimiento.</p>
+
+<p>Las infraestructuras de red pueden variar en los siguientes aspectos:</p>
+<ul>
+  <li>El tamaño que ocupa la infraestructura</li>
+  <li>El número de usuarios conectados</li>
+  <li>El número y tipo de servicios disponibles</li>
+</ul>
+
+<p>Es por esto que existen varios tipos de redes para cubrir diferentes escenarios. En esta “Wiki” cubriremos un tipo de red conocido como WAN (“red de área amplia” si traducimos directamente del inglés), la cuál se utiliza para cubrir grandes áreas (como su nombre indica) y proporciona acceso a otras redes. Este tipo de redes normalmente están controladas por los proveedores de servicios de telecomunicación.</p>
+
+<h3 id="1-qué-tiene-de-diferente-con-respecto-lan-y-man">1. ¿Qué tiene de diferente con respecto LAN y MAN?</h3>
+
+<p>Antes de proceder a explicar más a fondo las redes WAN, es necesario compararlo con algunas de las redes existentes.</p>
+
+<p>Una de las más conocidas y a la que todos tenemos acceso es la <strong>LAN</strong> (redes de área local). Se trata de la topología más pequeña y fácil de manejar, por eso es instalada y utilizada tanto a nivel doméstico como a nivel de pequeñas empresas y negocios. A continuación, en la <em>Figura 1</em> mostramos la red en cuestión.</p>
+
+<figure><img class="docimage" src="images/lan.png" alt="LAN" style="max-width: 300px" /><figcaption>Figura 1</figcaption></figure>
+
+<div class="bs-callout bs-callout-primary">A diferencia de la WAN, en la LAN no es necesario subscribirse a un proveedor de servicios para obtener conexión y poder utilizar la red.</div>
+
+<p>Como red intermedia que se sitúa entre la LAN y la WAN tenemos la <strong>MAN</strong>. Las redes MAN están destinadas a grandes organizaciones/empresas cuyas necesidades son mayores de las que puede ofrecer una LAN. Uno de los requisitos que se imponen para que una red se considere una MAN en vez de una WAN es que la red conecte ordenadores a distancia (en diferentes calles, edificios…) que estén en la misma ciudad, una vez que se conecten desde otra localización no se consideraría una MAN.</p>
+
+<p>Además de las redes mencionadas anteriormente, existen otras como:</p>
+<ul>
+  <li>RAN (Radio Access network)</li>
+  <li>CAN (Controller Area network)</li>
+  <li>PAN (Personal Area Network)</li>
+  <li>BAN (Body Area Network)</li>
+</ul>
+
+<p>A continuación, en la <em>Figura 2</em> podemos ver la clasificación de las redes por su tamaño.</p>
+
+<figure><img class="docimage" src="images/network-clasification.png" alt="Clasificación de Redes" style="max-width: 400px" /><figcaption>Figura 2</figcaption></figure>
+
+<h3 id="2-implementaciones">2. Implementaciones</h3>
+
+<p>Una vez que hemos diferenciado las redes de área amplia de otras redes de menor tamaño, describimos las diferentes implementaciones, topologías que pueden utilizarse al implementar una WAN.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Nota:</b> Haremos más incapie en las topologías de Punto a Punto, Hub &amp; Spoke y Mesh en los próximos puntos. La topología de seguridad preventiva doble, al tratarse de la topología punto a punto con redundancia no la tocaremos.</div>
+
+<p>Las topologías más utilizadas y comunes son las siguientes:</p>
+<ul>
+  <li>Punto a punto: Es la topología más simple de todas. Conecta directamente dos redes.</li>
+  <li>Hub and Spoke: Una implementación de la topología de estrella para WAN. Un punto central interconecta con puntos extremos utilizando conexiones punto a punto.</li>
+  <li>Mesh: Este tipo de implementación proporciona un mejor rendimiento comparado con la mayoría de implementaciones pero requiere que todos los puntos estén interconectados entre sí. Esto supone un alto coste tanto administrativo como material.</li>
+  <li>Implementación de seguridad preventiva doble: Se trata de una implementación de la topología de punto a punto con redundancia en cada una de las conexiones. Esta topología es todavía más costosa que la topología Mesh.</li>
+</ul>
+
+<p>Implementaciones como la Hub &amp; Spoke y Mesh hoy en día se realizan por software (aunque siempre existe alguna excepción). Este tipo de implementaciones por software se conocen como Software Defined WAN o <strong>SD-WAN</strong>. En el próximo punto profundizaremos un poco más.</p>
+
+<p>Antes de continuar con el siguiente punto, una tabla comparando y resumiendo las diferentes topologías vistas hasta ahora. En la tabla compararemos el coste tanto administrativo como económico de la topología, la rapidez (se puede traducir también a la menor distancia entre dos puntos) y la fiabilidad (en caso de que una ruta falle, ¿sigue la red operacional?).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topología</th>
+      <th>Coste</th>
+      <th>Rapidez</th>
+      <th>Fiabilidad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Punto a Punto</td>
+      <td>Moderado</td>
+      <td>Normal</td>
+      <td>Normal</td>
+    </tr>
+    <tr>
+      <td>Hub &amp; Spoke</td>
+      <td>Bajo</td>
+      <td>Baja</td>
+      <td>Baja</td>
+    </tr>
+    <tr>
+      <td>Mesh</td>
+      <td>Alto</td>
+      <td>Muy alta</td>
+      <td>Muy alta</td>
+    </tr>
+    <tr>
+      <td>SPD</td>
+      <td>Muy alto</td>
+      <td>Normal</td>
+      <td>Muy alta</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="3-sd-wan">3. SD-WAN</h3>
+<p><strong>Software Defined WAN</strong>, también conocido como <strong>SD-WAN</strong>, consiste en implementar topologías WAN por medio de software (como su nombre indica). Utilizar implementaciones como esta supone una mejora en la administración de la red (en caso de querer cambiar de topología, no habría necesidad de adquirir nuevo hardware para poder implementarla). Las WAN tradicionales (las que funcionan por hardware) necesitan routers tradicionales para funcionar, este no es el caso para WANs de software. La operación de la SD-WAN puede llegar hasta la <strong>capa 7 del modelo OSI</strong>.</p>
+
+<p>Tecnologías como esta permiten que empresas y organizaciones de gran tamaño puedan implementar su propia WAN con un coste reducido utilizando la infraestructura existente que ya de por sí proporciona Internet.</p>
+
+<figure><img class="docimage" src="images/sd-wan-diagram.png" alt="Diagrama SD-WAN" style="max-width: 450px" /><figcaption>Figura 3</figcaption></figure>
+
+<p>En la <em>Figura 3</em> vemos un diagrama donde empresas como Amazon, Google, etc. pueden crear sus propias WAN definidas por software utilizando medios de conexión ya existentes como LTE, MPLS y “Broadband”.</p>
+
+<p>Las dos características principales que ofrecen las redes con arquitectura SD-WAN son:</p>
+<ul>
+  <li>Dirección centralizada: Al centralizar las políticas de seguridad y rendimiento en unos pocos dispositivos (servidores, centros de procesamiento de datos, etc.), esto permite que los gastos operativos se reduzcan (esto lo hemos mencionado también en el párrafo anterior).</li>
+  <li>ZTP (Zero-Touch Provisioning): Al estar la red definida por software, permite que la configuración se sincronice fácilmente entre todos los dispositivos de la red. No hace falta configurar cada dispositivo.</li>
+</ul>
+
+<p>Otras de las ventajas que ofrece las WAN definidas por software es la manera que permite al usuario controlar el tráfico de datos. Las empresas/organizaciones pueden administrar y controlar el tráfico con una prioridad determinada.</p>
+
+<p>A pesar de las ventajas mencionadas el problema que sigue teniendo la SD-WAN es que sigue dependiendo de infraestructuras y WAN existentes. Esto limita el rendimiento que pueda ofrecer la red.</p>
+
+<h2 id="operación-de-las-wan">Operación de las WAN</h2>
+
+<p>Desviandonos de las WAN definidas por software, volvemos a las WAN definidas por hardware. Explicaremos a continuación, dónde se encuentra en el modelo OSI, los diferentes dispositivos utilizados y la conmutación que crea este tipo de red.</p>
+
+<h3 id="1-qué-capas-utiliza-del-modelo-osi">1. ¿Qué capas utiliza del modelo OSI?</h3>
+
+<p>Estas utilizan las capas 1 (capa física) y 2 (capa de enlace de datos) del modelo OSI. En la tabla vemos donde se encuentran las capas mencionadas anteriormente.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Capa</th>
+      <th>Protocolos (no se incluyen todos)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aplicación (7)</td>
+      <td>DNS, DHCP, FTP, HTTPS, IMAP, LDAP, POP3, SSH</td>
+    </tr>
+    <tr>
+      <td>Presentación (6)</td>
+      <td>JPEF, MIDI, MPEG, PICT, TIFF</td>
+    </tr>
+    <tr>
+      <td>Sesión (5)</td>
+      <td>NetBIOS, NFS, PAP, SCP, SQL</td>
+    </tr>
+    <tr>
+      <td>Transporte (4)</td>
+      <td>TCP, UDP</td>
+    </tr>
+    <tr>
+      <td>Red (3)</td>
+      <td>ICMP, IGMP, IPsec, IPv4, IPv6, IPX, RIP</td>
+    </tr>
+    <tr>
+      <td>Enlace de datos (2)</td>
+      <td>ARP, ATM, CDP, FDDI, HDLC, MPLS, PPP</td>
+    </tr>
+    <tr>
+      <td>Física (1)</td>
+      <td>Bluetooth, Ethernet, DSL, ISSDN, Wi-Fi</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Es evidente por qué utiliza la capa 1, ya que es necesario conectar los dispositivos entre sí utilizando las interfaces físicas existentes, ¿pero por qué utiliza las capa 2? Esto se debe a que las WAN asignan direcciones físicas a sus dispositivos, y controlan el flujo y el encapsulamiento de los paquetes que recorren la red. En la capa 2 también se define la forma en la que los datos están encapsulados.</p>
+
+<div class="bs-callout bs-callout-primary">Dado que una gran parte de los enlaces WAN que se utilizan tienen como topología la conexión punto a punto, la dirección de la trama (capa de enlace de datos) no se suele incluir.</div>
+
+<h3 id="2-hardware-utilizado">2. Hardware utilizado</h3>
+
+<p>Para poner en marcha una WAN se necesita una gran variedad de hardware. A pesar de no poder incluir todo el hardware utilizado, incluiremos el más “esencial”.</p>
+
+<ul>
+  <li><strong>Modems</strong>: Los modems tienen como objetivo tanto convertir como traducir las señales digitales para que otros dispositivos puedan utilizar las señales (información) enviadas.
+    <ul>
+      <li><strong>“Dial-up”</strong>: Los modems “dial-up” utilizan la red telefónica (PTSN) para conectarse al ISP. Su velocidad teórica máxima es de 56 kbit/s. Hoy en día ya no se utiliza.</li>
+      <li><strong>Banda ancha</strong>: Este tipo de modems tiene dos variaciones, una funcionando con el serivicos DSL (también utiliza la red telefónica pero su velocidad teórica máxima se ve incrementada a los 24 Mbps) y otra utilizando cables de alta velocidad (se conocen también como ONTs).</li>
+    </ul>
+  </li>
+  <li><strong>Servidor de acceso</strong>: Este servidor controla y coordina los módem que funcionan por línea telefónica. Al igual que los módems que funcionan por línea telefónica, ya no se utilizan.</li>
+  <li><strong>CSU/DSU</strong>: CSU (Channel Service Unit) y DSU (Data Service Unit) es un dispositivo (o una interfaz designada del router) que convierte los paquetes procedentes de la LAN y los traduce a un formato que la WAN pueda entender y viceversa.</li>
+  <li><strong>Switches</strong>: Los switches conecta varios dispositivos por medio de las numerosas interfaces que ofrece. Utiliza las direcciones MAC de los dispositivos para redireccionar el tráfico.
+    <ul>
+      <li><strong>WAN</strong>: Un switch multipuerto que utilizan las ISP. Estos dispositivos conmutan el tráfico y operan en la capa de enlace de datos del modelo OSI.</li>
+      <li><strong>Multicapa</strong>: A diferencia del switch WAN, los switch multicapa son capaces de operar a capas más externas que la capa 2 del modelo OSI. Pueden inspeccionar los paquetes de red y acceder a información como el protocolo utilizado, etc.</li>
+    </ul>
+  </li>
+  <li><strong>Router</strong>: Los routers proporiconan conexión entre las LAN y WAN. Incluyen interfaces Ethernet y (dependiendo del tipo de router) seriales. Para poder conectarse con la WAN, normalmente va acompañado de un módem, ONT o DSU/CSU.
+    <ul>
+      <li><strong>Central</strong>: Cada proveedor cuenta con varios routers centrales. Este tipo de routers debe soportar múltiples conexiones simultáneas sin ningún tipo de ralentización ya que se suelen posicionar en el núcleo de la red.</li>
+    </ul>
+  </li>
+  <li><strong>Router + ONT</strong>: Para simplificar la mayoría de instalaciones los proveedores de internet instalan dispositivos que incluyen tanto el router como el módem/ONT en el mismo dispositivo.</li>
+</ul>
+
+<h3 id="3-conmutación-de-la-red">3. Conmutación de la Red</h3>
+
+<p>En la WAN podemos diferenciar dos formas de establecer una conexión e intercambiar información. Dependiendo de lo que queramos enviar, un sistema será más eficiente que el otro.</p>
+
+<h4 id="31-conmutación-de-paquetes">3.1. Conmutación de paquetes</h4>
+<p>La conmutación de paquetes divide los datos que el emisor envía al receptor en paquetes que se enrutan a través de una red compartida. A diferencia de la conmutación por circuitos no hace falta que se establezca un canal.</p>
+
+<p>Los paquetes enviados encuentran su destinado gracias al enrutamiento que hacen los switches. Los paquetes enviados pueden varias dependiendo del sistema que se utilice. Distinguimos dos tipos de sistemas:</p>
+<ul>
+  <li>Sistemas sin conexión (datagramas): Toda la información del direccionamiento se debe transportar en el paquete. Cada switch evalua la dirección para dirigir el paquete a su destino.</li>
+  <li>Sistemas orientados a la conexión (circuitos virtuales): En este sistema, los switches consultan el identificador que se incluye en el paquete (no se incluye toda la información del direccionamiento) y lo comparan con los identificadores que ya tienen almacenados en sus tablas de enrutamiento.</li>
+</ul>
+
+<p>Las redes de conmutación de paquetes se utilizan extensivamente en las comunicaciones de datos (salvo en una excepción que explciaremos más en el próximo subpunto).</p>
+
+<p>A pesar de ser el sistema ideal para la mayoría de datos, trae consigo algunas desventajas como los retrasos y variabilidad de retraso. Esto se debe a que los switches utilizados para enrutar el tráfico tienen que procesar cada paquete generado y enrutarlo.</p>
+
+<h4 id="32-conmutación-de-circuitos">3.2. Conmutación de circuitos</h4>
+<p>En la conmutación de circuitos se crea y establece una conexión virtual (un circuito o canal) de la fuente al destino.</p>
+
+<p>La conmutación por circuitos cuenta con tres fases:</p>
+<ul>
+  <li>Establecimiento</li>
+  <li>Transferencia</li>
+  <li>Desconexión</li>
+</ul>
+
+<p>Su uso es ideal para transmitir y recibir voz ya que el retardo es pequeño y fijo. Sin embargo, el funcionamiento de este tipo de conmutación no es ideal para transmitir datos que no sean de voz. Esto se debe a que la conexión entre el emisor y el receptor esta diseñada para transmitir un flujo de datos continuo y fijo (en llamadas de voz el bitrate es constante). Un vídeo (comprimido), por ejemplo, normalmente cuenta con un bitrate diferente dependiendo de la cantidad de información que haya en un momento determinado.</p>
+
+<p>Tener una capacidad de canal asignada significa que si por alguna razón no se enviasen datos, se estaría desaprovechando la conexión.</p>
+
+<p>Los dos tipos más comunes de tecnologías WAN de conmutación de circuitos son la PSTN y ISDN.</p>
+
+<h4 id="33-comparación">3.3. Comparación</h4>
+<p>Para resumir el punto, ofrecemos una tabla con las principales características de cada tipo de conmutación.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Conmutación</th>
+      <th>Ancho de Banda</th>
+      <th>Retardo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Paquetes</td>
+      <td>Variable</td>
+      <td>Sí</td>
+    </tr>
+    <tr>
+      <td>Circuitos</td>
+      <td>Fijo</td>
+      <td>Solo en el establecimiento</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="proveedores-en-españa">Proveedores en España</h2>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Nota:</b> En esta comparativa no incluiré proveedores cuya área de negocio se limite a una comunidad autónoma (o unas pocas). Algunos ejemplos son: Euskaltel y R.</div>
+
+<p>En este apartado nos centraremos en las velocidades máximas que nos ofrecen los operadores que tenemos en España (en el caso de qeu haya paquetes que ofrezcan la misma velocidad escogeremos el más barato).</p>
+
+<h3 id="1-movistar">1. Movistar</h3>
+<p>Movistar (Telefónica) cuenta con la red de fibra con más alcance de todas las operadoras. Durante los últimos años ha concentrado sus esfuerzos en sustituir la red existente de cobre por una de fibra.</p>
+
+<p>A pesar de controlar una de las mayores redes de fibra del país, Movistar deja que otras operadoras utilicen la red a cambio de considerables sumas de dinero.</p>
+
+<p>El mejor plan de Movistar actualmente ofrece 600 Mb simétricas por un precio de 71.4€. Este precio incluye otros servicios como Televisión, Teléfono Fijo y Líneas Móviles con acceso a la red 4G LTE.</p>
+
+<p>Destacar que tanto las señales de Televisión como las del Teléfono Fijo son transmitidas por cable de fibra.</p>
+
+<h3 id="2-orange-y-jazztel">2. Orange y Jazztel</h3>
+<p>Orange cuenta con una de las mayores redes de Fibra (por detrás de Movistar) después de la adquisición de Jazztel. A pesar de la compra, ambas compañías ofrecen paquetes distintos.</p>
+
+<p>Por un lado Orange ofrece 1 Gbps simétricos por 64.95€ al mes. Jazztel ofrece 600 Mb simétricos por 56.95€ al mes.</p>
+
+<p>El paquete de Orange es uno de los paquetes que más ancho de banda ofrece de todos los ISP españoles.</p>
+
+<h3 id="3-vodafone-ono">3. Vodafone (Ono)</h3>
+<p>Otra de las redes más grandes de España es la de Vodafone, la cuál “heredó” después de la compra de Ono. Ono fue una de las primeras compañías que apostó fuerte por la fibra. Comparado con otras redes como la de Orange y Movistar, la red de Vodafone (Ono) es en gran parte HFC.</p>
+
+<p>Vodafone ofrece a sus clientes una velocidad de 1 Gbps por 55.99€.</p>
+
+<h3 id="5-tabla-comparativa">5. Tabla Comparativa</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operadora</th>
+      <th>Ancho de Banda</th>
+      <th>Fijo</th>
+      <th>Móvil</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Movistar</td>
+      <td>600 Mbps</td>
+      <td>Sí</td>
+      <td>Sí</td>
+      <td>71.4€</td>
+    </tr>
+    <tr>
+      <td>Orange</td>
+      <td>1 Gbps</td>
+      <td>Sí</td>
+      <td>Sí</td>
+      <td>64.95€</td>
+    </tr>
+    <tr>
+      <td>Jazztel</td>
+      <td>600 Mbps</td>
+      <td>Sí</td>
+      <td>Sí</td>
+      <td>56.95€</td>
+    </tr>
+    <tr>
+      <td>Vodafone</td>
+      <td>1 Gbps</td>
+      <td>Sí</td>
+      <td>No</td>
+      <td>55.99€</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        <a href="tag_general.html" class="btn btn-default navbar-btn cursorNorm" role="button">general</a>
+        
+        
+        
+        <a href="tag_punto a punto.html" class="btn btn-default navbar-btn cursorNorm" role="button">punto a punto</a>
+        
+        
+        
+        <a href="tag_hub & spoke.html" class="btn btn-default navbar-btn cursorNorm" role="button">hub & spoke</a>
+        
+        
+        
+        <a href="tag_mesh.html" class="btn btn-default navbar-btn cursorNorm" role="button">mesh</a>
+        
+        
+        
+    </div>
+
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+    var pathname = window.location.pathname
+    var id = (window.location.pathname === "/") ? "/index.html" : pathname
+    //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-smvg-github-io-tar-wiki-wan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               Samuel Martín Vargas Giagnocavo<br />
+Página generada: Apr 28, 2020 <br />
+<p><img style="margin-top: 10px" width=172 height=64 src="images/company_logo.png" alt="UAL"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>

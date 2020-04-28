@@ -1,0 +1,138 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Indice
+  version: 
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Descripción general
+    output: web, pdf
+    folderitems:
+
+    - title: Tecnologías WAN
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+  - title: Conexiones Punto a Punto
+    output: web, pdf
+    folderitems:
+
+    - title: Descripción de Punto a Punto
+      url: /punto_punto.html
+      output: web, pdf
+
+    - title: Operación de PPP
+      url: /operacion_ppp.html
+      output: web, pdf
+
+    - title: Implementación de PPP
+      url: /implementacion_ppp.html
+      output: web, pdf
+
+  - title: Conexiones Hub and Spoke
+    output: web, pdf
+    folderitems:
+
+    - title: Descripción de Hub & Spoke
+      url: /hub_spoke.html
+      output: web, pdf
+
+  - title: Conexiones Mesh
+    output: web, pdf
+    folderitems:
+
+    - title: Descripción de Mesh
+      url: /mesh.html
+      output: web, pdf
+
+  - title: Solución de problemas
+    output: web, pdf
+    folderitems:
+
+    - title: Conectividad WAN
+      url: /solucion.html
+      output: web, pdf
+      type: homepage
+
+  - title: Conexiones de sucursal
+    output: web, pdf
+    folderitems:
+
+    - title: Conexiones de acceso remoto
+      url: /conexiones_remoto.html
+      output: web, pdf
+
+    - title: PPPoE
+      url: /pppoe.html
+      output: web, pdf
+
+    - title: VPN
+      url: /vpn.html
+      output: web, pdf
+    
+    - title: GRE
+      url: /gre.html
+      output: web, pdf
+
+    - title: eBGP
+      url: /ebgp.html
+      output: web, pdf
+
+  - title: Glosario
+    output: web, pdf
+
+    folderitems:
+    - title: De la A a la I
+      url: /glosario_a_i.html
+      output: web, pdf
+
+    - title: De la J a la R
+      url: /glosario_j_r.html
+      output: web, pdf
+
+    - title: De la S a la Z
+      url: /glosario_s_z.html
+      output: web, pdf
+
+  - title: Bibliografía
+    output: web, pdf
+
+    folderitems:
+    - title: Descripción general
+      url: /biblio_1.html
+      output: web, pdf
+
+    - title: Conexiones Punto a Punto
+      url: /biblio_2.html
+      output: web, pdf
+
+    - title: Conexiones Hub and Spoke
+      url: /biblio_3.html
+      output: web, pdf
+
+    - title: Conexiones Mesh
+      url: /biblio_4.html
+      output: web, pdf
+
+    - title: Solución de Problemas
+      url: /biblio_5.html
+      output: web, pdf
+    
+    - title: Conexiones de Sucursal
+      url: /biblio_6.html
+      output: web, pdf
