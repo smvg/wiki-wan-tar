@@ -12,7 +12,7 @@ site_title: "Tema 8: WAN"
 company_name: "Samuel Martín Vargas Giagnocavo"
 # this appears in the footer
 
-github_editme_path: smvg/tar-wiki-wan/blob/gh-pages/
+github_editme_path: smvg/wiki-wan-tar/blob/gh-pages/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 # gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
